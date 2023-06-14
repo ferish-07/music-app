@@ -6,6 +6,7 @@ import Explore from '../Explore';
 import Library from '../Library';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { assets } from '../../utils';
+import Demo from '../Demo';
 
 
 export default function BottomTabNavigation() {
@@ -31,7 +32,7 @@ export default function BottomTabNavigation() {
 
                 tabBarIconStyle: {},
             }} />
-            <Tab.Screen name="Explore" component={Explore} options={{
+            <Tab.Screen name="Explore" component={Demo} options={{
                 tabBarIcon: ({ focused }) => {
                     console.log("FOCUSEDDDD", focused)
                     if (focused) {

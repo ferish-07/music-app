@@ -1,17 +1,18 @@
-import { SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect } from 'react'
 import TrackPlayer, { useProgress, Capability } from 'react-native-track-player';
+import Slider from '@react-native-community/slider';
 
 export default function Demo() {
     const progress = useProgress()
     const track1 = {
-        url: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Load media from the network
-        title: 'Avaritia',
-        artist: 'deadmau5',
+        url: 'https://firebasestorage.googleapis.com/v0/b/newprojecttraining-27f3e.appspot.com/o/tereVaste.mp3?alt=media&token=9e0181cd-a94c-494a-8cd8-786d2fac1eba', // Load media from the network
+        title: 'Tere Vaste',
+        artist: 'Ferish',
         album: 'while(1<2)',
         genre: 'Progressive House, Electro House',
         date: '2014-05-20T07:00:00+00:00', // RFC 3339
-        artwork: 'http://example.com/cover.png', // Load artwork from the network
+        artwork: 'https://firebasestorage.googleapis.com/v0/b/newprojecttraining-27f3e.appspot.com/o/martin-katler-94lAQc7ipNg-unsplash%20(1).jpg?alt=media&token=e5b2f3bc-5450-4301-8b7d-8d89a33fb0d4', // Load artwork from the network
         duration: 402 // Duration in seconds
     };
 
@@ -64,6 +65,21 @@ export default function Demo() {
             <TouchableOpacity onPress={() => TrackPlayer.pause()}>
                 <Text>PAUSE</Text>
             </TouchableOpacity>
+
+            <Image  source={{uri: track1.artwork}} style={{height:200, width:200}}/>
+            <Slider
+            style={{width: 200, height: 40}}
+            value={progress.position}
+            minimumValue={0}
+            maximumValue={progress.duration}
+            thumbTintColor="#FFD369"
+            minimumTrackTintColor="#FFD369"
+            maximumTrackTintColor="#fff"
+            onSlidingComplete={async value => {
+              await TrackPlayer.seekTo(value);
+            }}
+
+/>
         </SafeAreaView>
     )
 }
