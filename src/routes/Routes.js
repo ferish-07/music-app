@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import BottomTabNavigation from '../screen/bottomTab/BottomTabNavigation';
+import MusicPlayer from '../screen/MusicPlayer';
 
 export default function Routes() {
     const Stack = createNativeStackNavigator();
@@ -11,6 +12,8 @@ export default function Routes() {
         <NavigationContainer >
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="BottomTab" component={BottomTabNavigation} />
+                <Stack.Screen name="MusicPlayer" component={MusicPlayer} />
+
             </Stack.Navigator>
         </NavigationContainer>
     )

@@ -3,10 +3,13 @@ import React from 'react'
 import Icon from 'react-native-vector-icons/Ionicons';
 import { assets } from '../utils';
 import LinearGradient from 'react-native-linear-gradient';
+import Genre from './genre/Genre';
+import LisentAgain from './lisentAgain.js/LisentAgain';
+// import 
 
 export default function Dashboard() {
     return (
-        <SafeAreaView style={{ backgroundColor: 'black', height: '100%' }}>
+        <SafeAreaView style={{ backgroundColor: '#082635', height: '100%' }}>
             <LinearGradient colors={['#082635', '#111537', "#0e1f2e", "#111b1f", '#030303']} style={{
                 flex: 1,
             }}>
@@ -34,7 +37,10 @@ export default function Dashboard() {
                             </View>
                         </View>
                     </View>
-                    <Text>Dashboard</Text>
+
+                    <Genre />
+                    <LisentAgain />
+
                 </ScrollView>
             </LinearGradient>
         </SafeAreaView>
