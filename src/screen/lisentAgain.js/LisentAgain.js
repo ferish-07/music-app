@@ -8,7 +8,7 @@ export default function LisentAgain() {
     const navigation = useNavigation()
     const [imageLoading, setImageLoading] = useState(0)
     useEffect(() => {
-        console.log("LOADINGGGG=====")
+        // console.log("LOADINGGGG=====")
     }, [imageLoading])
     return (
         <View>
@@ -45,7 +45,7 @@ export default function LisentAgain() {
                         numColumns={Math.ceil(Data.length / 2)}
                         style={{ marginTop: '8%' }}
                         renderItem={({ item, index }) => (
-                            <TouchableOpacity style={{ marginLeft: 10, }} onPress={() => navigation.navigate("MusicPlayer", { data: item, index: index })}>
+                            <TouchableOpacity style={{ marginLeft: 10, }} onPress={() => navigation.navigate("MusicPlayer", { data: Data, index: index })}>
 
                                 <Image source={{ uri: item.artwork }} style={{ width: 150, height: 150, borderRadius: 5 }} onLoadEnd={() => { item.loaded = false, setImageLoading(imageLoading + 1) }} />
                                 <Text style={{ color: 'white', fontSize: 18 }}>{item.title}</Text>
