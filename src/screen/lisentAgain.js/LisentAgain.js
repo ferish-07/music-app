@@ -33,6 +33,7 @@ export default function LisentAgain() {
                     </TouchableOpacity>
                 </View>
             </View>
+
             <View style={{ marginLeft: '2%' }}>
                 <ScrollView
                     horizontal
@@ -45,10 +46,10 @@ export default function LisentAgain() {
                         numColumns={Math.ceil(Data.length / 2)}
                         style={{ marginTop: '8%' }}
                         renderItem={({ item, index }) => (
-                            <TouchableOpacity style={{ marginLeft: 10, }} onPress={() => navigation.navigate("MusicPlayer", { data: Data, index: index })}>
+                            <TouchableOpacity style={{ marginLeft: 10, justifyContent: 'center', alignItems: 'center' }} onPress={() => navigation.navigate("MusicPlayer", { data: Data, index: index })}>
 
-                                <Image source={{ uri: item.artwork }} style={{ width: 150, height: 150, borderRadius: 5 }} onLoadEnd={() => { item.loaded = false, setImageLoading(imageLoading + 1) }} />
-                                <Text style={{ color: 'white', fontSize: 18 }}>{item.title}</Text>
+                                <Image source={{ uri: item.artwork }} style={{ width: 95, height: 95, borderRadius: 5 }} onLoadEnd={() => { item.loaded = false, setImageLoading(imageLoading + 1) }} />
+                                <Text numberOfLines={1} style={{ color: 'white', fontSize: 12, }}>{item.title}</Text>
 
                                 <ActivityIndicator animating={item.loaded} size="large" color="white"
                                     style={{ position: 'absolute', justifyContent: 'center', alignItems: 'center', width: '100%', height: "100%", }} />

@@ -503,7 +503,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Music;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srkexport.iSRKiPhone;
 				PRODUCT_NAME = Music;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -530,7 +530,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Music;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srkexport.iSRKiPhone;
 				PRODUCT_NAME = Music;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
