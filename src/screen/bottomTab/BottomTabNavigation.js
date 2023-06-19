@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import { assets } from '../../utils';
 import MusicPlayer from '../MusicPlayer';
 import Demo from '../Demo';
+import Calculator from '../Calculator';
 
 
 export default function BottomTabNavigation() {
@@ -48,7 +49,7 @@ export default function BottomTabNavigation() {
                 ,
                 tabBarIconStyle: {},
             }} />
-            <Tab.Screen name="Library" component={Library} options={{
+            <Tab.Screen name="Library" component={Calculator} options={{
                 tabBarIcon: ({ focused }) => (
                     <Image source={focused ? assets.musicLibraryWhite : assets.musicLibraryWhiteOutline} color='white' />
                 ),
