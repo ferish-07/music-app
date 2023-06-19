@@ -7,6 +7,7 @@ import Library from '../Library';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { assets } from '../../utils';
 import MusicPlayer from '../MusicPlayer';
+import Demo from '../Demo';
 
 
 export default function BottomTabNavigation() {
@@ -32,7 +33,7 @@ export default function BottomTabNavigation() {
 
                 tabBarIconStyle: {},
             }} />
-            <Tab.Screen name="Explore" component={MusicPlayer} options={{
+            <Tab.Screen name="Explore" component={Demo} options={{
                 tabBarIcon: ({ focused }) => {
                     console.log("FOCUSEDDDD", focused)
                     if (focused) {
